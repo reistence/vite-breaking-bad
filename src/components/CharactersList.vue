@@ -43,7 +43,7 @@ export default {
 .container {
   background-color: white;
   .results {
-    background-color: $bg-primary;
+    background-color: $search-results;
     vertical-align: middle;
     margin-bottom: 1em;
     p {
