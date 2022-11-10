@@ -25,7 +25,10 @@ export default {
 
     <div class="character-list p-2">
       <AppLoader v-if="store.loading"></AppLoader>
-      <div v-else class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+      <div
+        v-else
+        class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-3"
+      >
         <div
           class="col"
           v-for="character in store.characters"
@@ -44,16 +47,22 @@ export default {
   background-color: white;
   .results {
     background-color: $search-results;
-    vertical-align: middle;
+
     margin-bottom: 1em;
     p {
-      vertical-align: middle;
       margin-bottom: 0;
     }
   }
 
   .character-list {
     border: 1px solid black;
+
+    .col {
+      transition: 200ms;
+    }
+    .col:hover {
+      transform: scale(1.05);
+    }
   }
 }
 </style>

@@ -12,7 +12,7 @@ export default {
     <!-- <div class="card-img p-1"> -->
     <img :src="character.img" :alt="character.name" />
     <!-- </div> -->
-    <h3 class="text-center mt-1">{{ character.name }}</h3>
+    <h3 class="text-center mt-3">{{ character.name }}</h3>
     <h4>{{ character.category }}</h4>
     <h5>{{ character.status }}</h5>
   </div>
@@ -23,7 +23,7 @@ export default {
 
 .character-card {
   background-color: $bg-primary;
-  height: max-content;
+
   // .card-img {
   img {
     object-fit: cover;
@@ -33,16 +33,17 @@ export default {
 }
 h3 {
   font-size: 1rem;
+  margin-top: 0.5em;
 }
 h4 {
   color: $card-txt;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 200;
   text-align: center;
 }
 h5 {
   color: $card-txt;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 200;
   text-align: center;
 }
