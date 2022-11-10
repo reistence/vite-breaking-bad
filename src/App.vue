@@ -2,6 +2,8 @@
 import AppHeader from "./components/AppHeader.vue";
 import CharactersList from "./components/CharactersList.vue";
 import CharacterCard from "./components/CharacterCard.vue";
+import AppLoader from "./components/AppLoader.vue";
+
 import axios from "axios";
 import { store } from "./store";
 
@@ -10,6 +12,7 @@ export default {
     AppHeader,
     CharactersList,
     CharacterCard,
+    AppLoader,
   },
   data() {
     return {
@@ -17,9 +20,10 @@ export default {
     };
   },
   created() {
+    this.store.loading = true;
     axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
       this.store.characters = resp.data;
-      console.log(this.store.characters);
+      this.store.loading = false;
     });
   },
 };
