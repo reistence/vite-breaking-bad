@@ -68,4 +68,7 @@ export default {
 
 <style lang="scss">
 @use "./style/general.scss" as *;
+main {
+  padding: 1em;
+}
 </style>

@@ -12,9 +12,11 @@ export default {
     <!-- <div class="card-img p-1"> -->
     <img :src="character.img" :alt="character.name" />
     <!-- </div> -->
-    <h3 class="text-center mt-3">{{ character.name }}</h3>
-    <h4>{{ character.category }}</h4>
-    <h5>{{ character.status }}</h5>
+    <div class="card-txt">
+      <h3 class="text-center mt-3">{{ character.name }}</h3>
+      <h4>{{ character.category }}</h4>
+      <h5>{{ character.status }}</h5>
+    </div>
   </div>
 </template>
 
@@ -23,6 +25,9 @@ export default {
 
 .character-card {
   background-color: $bg-primary;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 
   // .card-img {
   img {
@@ -30,22 +35,36 @@ export default {
     height: 260px;
     width: 100%;
   }
+  &:hover .card-txt {
+    display: block;
+    transition: all 9s;
+  }
 }
-h3 {
-  font-size: 1rem;
-  margin-top: 0.5em;
-}
-h4 {
-  color: $card-txt;
-  font-size: 0.8rem;
-  font-weight: 200;
-  text-align: center;
-}
-h5 {
-  color: $card-txt;
-  font-size: 0.7rem;
-  font-weight: 200;
-  text-align: center;
+
+.card-txt {
+  width: 100%;
+  position: absolute;
+  background-color: #33462ec1;
+  bottom: 0;
+  left: 0;
+  display: none;
+
+  h3 {
+    font-size: 1rem;
+    margin-top: 0.5em;
+  }
+  h4 {
+    color: $card-txt;
+    font-size: 0.8rem;
+    font-weight: 200;
+    text-align: center;
+  }
+  h5 {
+    color: $card-txt;
+    font-size: 0.7rem;
+    font-weight: 200;
+    text-align: center;
+  }
 }
 // }
 </style>

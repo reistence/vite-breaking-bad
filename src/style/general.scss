@@ -14,9 +14,17 @@
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  padding-bottom: 12em;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  background-color: $bg-primary;
+  background-image: linear-gradient(
+    #777719,
+    #2b4416,
+    #1c4710,
+    #2b4416,
+    #060904
+  );
   color: white;
 }
 

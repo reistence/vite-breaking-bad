@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div><i class="fa-solid fa-spinner"></i></div>
+  <div><i class="fa-solid fa-vial"></i></div>
 </template>
 
 <style lang="scss" scoped>
@@ -13,12 +13,12 @@ export default {
 
 div {
   margin: 2em auto;
-  width: 5rem;
+  width: 10%;
 
-  color: $bg-primary;
+  color: $card-txt;
   i {
     font-size: 5rem;
-    animation: loading ease 900ms infinite;
+    animation: loading ease 300ms infinite;
   }
   @keyframes loading {
     0% {

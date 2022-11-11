@@ -19,8 +19,14 @@ export default {
 
 <template>
   <div class="container py-3">
-    <div class="results p-2">
-      <p>Found {{ store.characters.length }} characters</p>
+    <div class="results p-2" v-show="!store.loading">
+      <p v-if="store.characters.length > 0">
+        {{ store.characters.length }} Found
+      </p>
+      <div v-else class="not-found">
+        <img src="../assets/img/Immagine-36.png" alt="" />
+        <p>404 Not Found</p>
+      </div>
     </div>
 
     <div class="character-list p-2">
@@ -44,7 +50,9 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 .container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.049);
+  border-radius: 10px;
+  min-height: 500px;
   .results {
     background-color: $search-results;
 
@@ -52,11 +60,20 @@ export default {
     p {
       margin-bottom: 0;
     }
+    .not-found {
+      position: relative;
+      p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $card-txt;
+        font-size: 3rem;
+      }
+    }
   }
 
   .character-list {
-    border: 1px solid black;
-
     .col {
       transition: 200ms;
     }

@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div class="container my-3">
-    <div class="d-flex gx-5 justigy-content-center">
+    <div class="input d-flex justify-content-flex-start">
       <input
         type="text"
         id="searchKey"
@@ -49,4 +49,28 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
+
+.input {
+  gap: 2em;
+  align-items: center;
+  input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    width: 20em;
+  }
+  select {
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+  button {
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-image: url("../assets/img/76a6c6515947b290b00bc2efd3f00833.png");
+    background-size: cover;
+  }
+}
 </style>
