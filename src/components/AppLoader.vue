@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div><i class="fa-solid fa-vial"></i></div>
+  <div><i class="fa-solid fa-flask"></i></div>
 </template>
 
 <style lang="scss" scoped>
@@ -18,7 +18,7 @@ div {
   color: $card-txt;
   i {
     font-size: 5rem;
-    animation: loading ease 300ms infinite;
+    animation: loading ease 700ms infinite;
   }
   @keyframes loading {
     0% {

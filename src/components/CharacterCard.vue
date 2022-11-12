@@ -35,17 +35,17 @@ export default {
     object-fit: cover;
     height: 260px;
     width: 100%;
+    border-radius: 5px;
   }
 
   .card-txt {
     width: 100%;
-
     position: absolute;
     background-color: #33462ec1;
     bottom: 0;
     left: 0;
     display: none;
-    animation: height 200ms linear;
+    animation: height 300ms linear;
 
     h3 {
       font-size: 1rem;
@@ -53,8 +53,9 @@ export default {
     }
     h4 {
       color: $card-txt;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       font-weight: 200;
+
       text-align: center;
     }
     h5 {

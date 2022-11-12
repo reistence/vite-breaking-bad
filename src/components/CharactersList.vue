@@ -73,6 +73,10 @@ export default {
         color: $card-txt;
         font-size: 3rem;
       }
+      img {
+        border-radius: 10px;
+        width: 100%;
+      }
     }
   }
 
@@ -82,6 +86,7 @@ export default {
     }
     .col:hover {
       transform: scale(1.1);
+      z-index: 999;
     }
   }
 }
