@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;

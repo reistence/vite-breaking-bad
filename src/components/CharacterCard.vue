@@ -28,6 +28,7 @@ export default {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  transition: all 9s;
 
   // .card-img {
   img {
@@ -35,36 +36,54 @@ export default {
     height: 260px;
     width: 100%;
   }
+
+  .card-txt {
+    width: 100%;
+
+    position: absolute;
+    background-color: #33462ec1;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: height 200ms linear;
+
+    h3 {
+      font-size: 1rem;
+      margin-top: 0.5em;
+    }
+    h4 {
+      color: $card-txt;
+      font-size: 0.8rem;
+      font-weight: 200;
+      text-align: center;
+    }
+    h5 {
+      color: $card-txt;
+      font-size: 0.7rem;
+      font-weight: 200;
+      text-align: center;
+    }
+  }
+
   &:hover .card-txt {
     display: block;
-    transition: all 9s;
+  }
+
+  @keyframes height {
+    0% {
+      height: 0px;
+    }
+    50% {
+      height: 50px;
+    }
+    75% {
+      height: 80px;
+    }
+    100% {
+      height: fit-content;
+    }
   }
 }
 
-.card-txt {
-  width: 100%;
-  position: absolute;
-  background-color: #33462ec1;
-  bottom: 0;
-  left: 0;
-  display: none;
-
-  h3 {
-    font-size: 1rem;
-    margin-top: 0.5em;
-  }
-  h4 {
-    color: $card-txt;
-    font-size: 0.8rem;
-    font-weight: 200;
-    text-align: center;
-  }
-  h5 {
-    color: $card-txt;
-    font-size: 0.7rem;
-    font-weight: 200;
-    text-align: center;
-  }
-}
 // }
 </style>

@@ -55,6 +55,9 @@ export default {
   min-height: 500px;
   .results {
     background-color: $search-results;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
 
     margin-bottom: 1em;
     p {
@@ -78,7 +81,7 @@ export default {
       transition: 200ms;
     }
     .col:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
   }
 }
